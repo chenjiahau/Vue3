@@ -1,13 +1,24 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import AccountComponent from "./components/AccountComponent.vue";
+
+const accountList = ref([]);
+
+const addAccount = (value) => {
+  if (!value) {
+    return;
+  }
+
+  accountList.value.push(value);
+};
+</script>
 
 <template>
-  <div class="container">
-    <h1>Vue3</h1>
-  </div>
+  <AccountComponent @add-account="addAccount">
+    <ul>
+      <li v-for="(item, index) in accountList" :key="index">
+        {{ item }}
+      </li>
+    </ul>
+  </AccountComponent>
 </template>
-
-<style scoped>
-.container {
-  padding: 16px;
-}
-</style>
