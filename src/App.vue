@@ -1,24 +1,28 @@
 <script setup>
-import { ref } from "vue";
-import AccountComponent from "./components/AccountComponent.vue";
-
-const accountList = ref([]);
-
-const addAccount = (value) => {
-  if (!value) {
-    return;
-  }
-
-  accountList.value.push(value);
-};
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <AccountComponent @add-account="addAccount">
-    <ul>
-      <li v-for="(item, index) in accountList" :key="index">
-        {{ item }}
-      </li>
-    </ul>
-  </AccountComponent>
+  <nav>
+    <RouterLink class="nav-item" active-class="active" to="/">Home</RouterLink>
+    <RouterLink class="nav-item" active-class="active" to="/about"
+      >About</RouterLink
+    >
+    <RouterLink class="nav-item" active-class="active" to="/articles"
+      >Articles</RouterLink
+    >
+  </nav>
+  <router-view />
 </template>
+
+<style scoped>
+.nav-item {
+  margin-right: 10px;
+  color: #333;
+}
+
+.active {
+  font-weight: bold;
+  color: #f00;
+}
+</style>

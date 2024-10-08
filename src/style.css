@@ -7,3 +7,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.block {
+  padding: 16px;
+}

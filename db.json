@@ -1,8 +1,36 @@
 {
-  "users": [
+  "tabs": [
     {
-      "id": 1,
-      "name": "John Doe"
+      "id": "1",
+      "title": "Tab 1",
+      "value": 0
+    },
+    {
+      "id": "2",
+      "title": "Tab 2",
+      "value": 1
+    },
+    {
+      "id": "3",
+      "title": "Tab 3",
+      "value": 2
+    }
+  ],
+  "articles": [
+    {
+      "id": "7093",
+      "title": "asdfasdf",
+      "content": "asdfsadf"
+    },
+    {
+      "id": "a58f",
+      "title": "asdfasdf",
+      "content": "asdfsadf"
+    },
+    {
+      "id": "d025",
+      "title": "asdfasdf",
+      "content": "asdfsadf"
     }
   ]
 }
